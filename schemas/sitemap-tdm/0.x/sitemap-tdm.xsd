@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://michaeldinzinger.github.io/schemas/sitemap-tdm/0.x"
+    xmlns="http://michaeldinzinger.github.io/schemas/sitemap-tdm/0.x"
+    elementFormDefault="qualified">
+
+<xsd:annotation>
+  <xsd:documentation>
+    XML Schema for the TDM Sitemap extension. This schema defines the
+    TDM-specific elements only; the core Sitemap elements are defined
+    separately.
+
+    This document is provided under the following conditions:
+
+        https://creativecommons.org/licenses/by/4.0/
+  </xsd:documentation>
+</xsd:annotation>
+
+<xsd:element name="mediatype">
+  <xsd:annotation>
+    <xsd:documentation>
+      This value points to the particular media type of the linked web asset.
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleType>
+    <xsd:annotation>
+      <xsd:documentation>
+        Mediatypes as defined by IANA.
+
+            https://www.iana.org/assignments/media-types/media-types.xml
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+</xsd:element>
+
+<xsd:simpleType name="tCCLicenseList">
+  <xsd:annotation>
+    <xsd:documentation>
+      Relevant Creative Commons license identifiers.
+
+          https://creativecommons.org/share-your-work/cclicenses/
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:string">
+    <xsd:enumeration value="CC BY"/>
+    <xsd:enumeration value="CC BY-SA"/>
+    <xsd:enumeration value="CC BY-NC"/>
+  </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:element name="usage-rights">
+  <xsd:annotation>
+    <xsd:documentation>
+      This value points to a license specifying the usage rights corresponding to
+      the web asset. It can be referred as URL or by one of the three CC License
+      Identifiers.
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexType>
+    <xsd:choice>
+      <xsd:element name="CCLicenseList" type="tCCLicenseList"/>
+      <xsd:element name="URL" type="xsd:anyURI"/>
+    </xsd:choice>
+  </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="policy" type="xsd:anyURI">
+    <xsd:annotation>
+      <xsd:documentation>
+        A URL pointing to the TDM Policy for the automated acquisition of a
+        license, valid for the web asset.
+
+        For more inforamtion regarding the declaration of TDM Policies, please
+        see the W3C specification of the TDM Reservation Protocol.
+
+            https://www.w3.org/2022/tdmrep/
+      </xsd:documentation>
+    </xsd:annotation>
+</xsd:element>
+
+</xsd:schema>
