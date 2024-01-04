@@ -1,5 +1,6 @@
 # michaeldinzinger.github.io
 
+```
 <xsd:element name="asset">
     <xsd:complexType>
         <xsd:sequence>
@@ -31,3 +32,4 @@
         </xsd:sequence>
     </xsd:complexType>
 </xsd:element>
+```

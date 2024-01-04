@@ -1,6 +1,6 @@
 ---
 layout: table
-table_include: overview.html
+table_include: overview-table.html
 table_sortlist: "{sortList: [[1,1]]}"
 ---
 
