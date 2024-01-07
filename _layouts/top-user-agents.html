@@ -11,10 +11,8 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script src="{{ '/assets/js/jquery-3.6.0.min.js?v=' | append: site.github.build_revision | relative_url }}"></script>
-    <script src="{{ '/assets/js/jquery.tablesorter.min.js?v=' | append: site.github.build_revision | relative_url }}"></script>
     <script type="text/javascript">
       $(document).ready(function() {
-        $(".tablesorter").tablesorter({{ page.table_sortlist }});
         $("#search").on("keyup", function() {
           var value = $(this).val().toLowerCase();
           $(".tablesearcher tbody tr").filter(function() {
@@ -35,18 +33,6 @@
       }
       table.matrix tbody tr th {
         font-weight: bold;
-      }
-      table.tablesorter thead tr:last-child .header {
-        background-image: url({{ '/assets/img/bg.gif?v=' | append: site.github.build_revision | relative_url }});
-        background-repeat: no-repeat;
-        background-position: center right;
-        cursor: pointer;
-      }
-      table.tablesorter thead tr:last-child .headerSortUp {
-        background-image: url({{ '/assets/img/asc.gif?v=' | append: site.github.build_revision | relative_url }});
-      }
-      table.tablesorter thead tr:last-child .headerSortDown {
-        background-image: url({{ '/assets/img/desc.gif?v=' | append: site.github.build_revision | relative_url }});
       }
       table tbody th { font-weight: normal; }
       table tbody td { text-align: right; }
@@ -77,16 +63,17 @@
       </header>
       <section>
 
-      {{ content }}
+      <h1>user agents</h1>
+      <p>Crawlers set their own name, which is called a product token, to find relevant groups of `allow` and `disallow` instructions. The product token (ExampleBot) is a substring of the User-Agent HTTP header. The following table shows the most frequently used product tokens in robots.txt files over the years. Note that for all further analysis of user agents we employ a case-insensitive comparison (`Bingbot` and `bingbot` are identical). The last column shows the percentage of robots.txt files, which contain the respective product token.</p>
 
       {% if page.table_searcher %}
       <p><input type="text" id="search" placeholder="{{ page.table_searcher }}"></p>
       {% endif %}
 
-      {% for table in page.table_include %}
-      {% include_relative {{ table }} %}
+      <p>The following table shows the annual top ten user agents in comparison.</p>
+
+      {% include_relative {{ table-comparsion }} %}
       <br>
-      {% endfor %}
 
       </section>
       <footer>
@@ -104,5 +91,4 @@
  Based on:
   https://github.com/pages-themes/minimal
   https://github.com/orderedlist/minimal
-  http://tablesorter.com/
 -->

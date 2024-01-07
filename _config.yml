@@ -1,13 +1,20 @@
 title: Annual statistics of Common Crawl robots.txt archives
-description: Different annual statistics of the Common Crawl robots.txt archives
-latest_crawl: CC-MAIN-2023-50
+description: Different annual statistics of the Common Crawl robots.txt web archives
 
 show_navigation: True
 navlist:
   - title: Home
     url: /
+  - title: Overview
+    url: /overview
+  - title: General
+    url: /general
+  - title: Top user agents
+    url: /top-user-agents
+  - title: User agent bias
+    url: /user-agent-bias
   - title: Resources
-    url: /tabs/resources
+    url: /resources
 
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
