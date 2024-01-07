@@ -47,21 +47,34 @@
       {{ content }}
 
       <h2>Content length (file size)</h2>
-      {% include_relative {{ table_content_length }} %}
+      {% for table in page.table_content_length %}
+      {% include_relative {{ table }} %}
+      <br>
+      {% endfor %}
 
       <h2>Crawl delay</h2>
-      {% include_relative {{ table_crawldelay }} %}
+      {% for table in page.table_crawldelay %}
+      {% include_relative {{ table }} %}
+      <br>
+      {% endfor %}
 
       <h2>Number of lines</h2>
-      {% include_relative {{ table_num_lines }} %}
-
-      <h2>Number of user agents</h2>
-      {% include_relative {{ table_num_user_agents }} %}
-
-      <h2>Number of user agents</h2>
-      {% include_relative {{ table_num_sitemaps }} %}
-
+      {% for table in page.table_num_lines %}
+      {% include_relative {{ table }} %}
       <br>
+      {% endfor %}
+
+      <h2>Number of user agents</h2>
+      {% for table in page.table_num_user_agents %}
+      {% include_relative {{ table }} %}
+      <br>
+      {% endfor %}
+
+      <h2>Number of user agents</h2>
+      {% for table in page.table_num_sitemaps %}
+      {% include_relative {{ table }} %}
+      <br>
+      {% endfor %}
 
       </section>
       <footer>
