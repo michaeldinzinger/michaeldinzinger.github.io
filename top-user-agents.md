@@ -1,4 +1,4 @@
 ---
 layout: top-user-agents
-table-comparison: tables/top-user-agents-comparison.html
+table_comparison: tables/top-user-agents-comparison.html
 ---

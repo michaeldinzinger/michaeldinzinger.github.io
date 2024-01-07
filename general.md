@@ -1,10 +1,10 @@
 ---
 layout: general
-table-content-length: tables/general-content-length.html
-table-crawldelay: tables/general-crawldelay.html
-table-num-lines: tables/general-num-lines.html
-table-num-user-agents: tables/general-num-user-agents.html
-table-num-sitemaps: tables/general-num-sitemaps.html
+table_content_length: tables/general-content-length.html
+table_crawldelay: tables/general-crawldelay.html
+table_num_lines: tables/general-num-lines.html
+table_num_user_agents: tables/general-num-user-agents.html
+table_num_sitemaps: tables/general-num-sitemaps.html
 ---
 
 General
