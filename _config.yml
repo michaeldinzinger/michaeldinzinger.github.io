@@ -7,8 +7,8 @@ navlist:
     url: /
   - title: Overview
     url: /overview
-  - title: General
-    url: /general
+  - title: Basic statistics
+    url: /basic-statistics
   - title: Top user agents
     url: /top-user-agents
   - title: User agent bias

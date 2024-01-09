@@ -1,0 +1,1067 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Annual statistics of Common Crawl robots.txt archives by michaeldinzinger</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=c32b451bdf945a62e09fb31fc03d563e4bf75463">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="/assets/js/jquery-3.6.0.min.js?v=c32b451bdf945a62e09fb31fc03d563e4bf75463"></script>
+    <style>
+      table.matrix tbody tr th {
+        font-weight: bold;
+      }
+      table tbody th { font-weight: normal; }
+      table tbody td { text-align: right; }
+    </style>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Annual statistics of Common Crawl robots.txt archives</h1>
+        <p>Different annual statistics of the Common Crawl robots.txt web archives
+        </p>
+
+        
+          <nav>
+            <p>
+            
+              <a href="/">Home</a><br/>
+            
+              <a href="/overview">Overview</a><br/>
+            
+              <a href="/basic-statistics">Basic statistics</a><br/>
+            
+              <a href="/top-user-agents">Top user agents</a><br/>
+            
+              <a href="/user-agent-bias">User agent bias</a><br/>
+            
+              <a href="/resources">Resources</a><br/>
+            
+            </p>
+          </nav>
+        
+
+        
+          <p class="view"><a href="https://github.com/michaeldinzinger/michaeldinzinger.github.io">View the Project on GitHub <small></small></a></p>
+        
+
+      </header>
+      <section>
+
+      <h1 id="top-user-agents">Top user agents</h1>
+
+<p>Crawlers set their own name, which is called a product token, to find relevant groups of <code class="language-plaintext highlighter-rouge">allow</code> and <code class="language-plaintext highlighter-rouge">disallow</code> instructions. The product token (ExampleBot) is a substring of the User-Agent HTTP header. The following table shows the most frequently used product tokens in robots.txt files over the years. Note that for all further analysis of user agents we employ a case-insensitive comparison (<code class="language-plaintext highlighter-rouge">Bingbot</code> and <code class="language-plaintext highlighter-rouge">bingbot</code> are identical). The last column shows the percentage of robots.txt files, which contain the respective product token.</p>
+
+
+      <div style="display: flex; justify-content: center;">
+        <button id="decreaseButton" class="button">&#8592;</button>
+        <input type="text" id="numberField" class="text-field" style="width: 60px; padding: 2px; text-align: center;" readonly>
+        <button id="increaseButton" class="button">&#8594;</button>
+      </div>
+      
+      <br>
+      
+      <table border="2" id="year_2016">
+  <thead>
+    <tr>
+      <th>User agent</th>
+      <th>Abs</th>
+      <th>Rel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>*</td>
+      <td align="right">37602976</td>
+      <td>98.3 %</td>
+    </tr>
+    <tr>
+      <td>adsbot-google</td>
+      <td align="right">3077166</td>
+      <td>8 %</td>
+    </tr>
+    <tr>
+      <td>adsbot-google-mobile</td>
+      <td align="right">2186267</td>
+      <td>5.7 %</td>
+    </tr>
+    <tr>
+      <td>mj12bot</td>
+      <td align="right">2116045</td>
+      <td>5.5 %</td>
+    </tr>
+    <tr>
+      <td>googlebot</td>
+      <td align="right">1722310</td>
+      <td>4.5 %</td>
+    </tr>
+    <tr>
+      <td>ahrefsbot</td>
+      <td align="right">1684312</td>
+      <td>4.4 %</td>
+    </tr>
+    <tr>
+      <td>mediapartners-google</td>
+      <td align="right">1373088</td>
+      <td>3.6 %</td>
+    </tr>
+    <tr>
+      <td>bingbot</td>
+      <td align="right">1256736</td>
+      <td>3.3 %</td>
+    </tr>
+    <tr>
+      <td>baiduspider</td>
+      <td align="right">1160379</td>
+      <td>3 %</td>
+    </tr>
+    <tr>
+      <td>yandex</td>
+      <td align="right">967217</td>
+      <td>2.5 %</td>
+    </tr>
+    <tr>
+      <td>semrushbot</td>
+      <td align="right">962169</td>
+      <td>2.5 %</td>
+    </tr>
+    <tr>
+      <td>nutch</td>
+      <td align="right">879528</td>
+      <td>2.3 %</td>
+    </tr>
+    <tr>
+      <td>dotbot</td>
+      <td align="right">864919</td>
+      <td>2.3 %</td>
+    </tr>
+    <tr>
+      <td>ia_archiver</td>
+      <td align="right">820005</td>
+      <td>2.1 %</td>
+    </tr>
+    <tr>
+      <td>pinterest</td>
+      <td align="right">756776</td>
+      <td>2 %</td>
+    </tr>
+    <tr>
+      <td>ahrefssiteaudit</td>
+      <td align="right">701300</td>
+      <td>1.8 %</td>
+    </tr>
+    <tr>
+      <td>blexbot</td>
+      <td align="right">698805</td>
+      <td>1.8 %</td>
+    </tr>
+    <tr>
+      <td>slurp</td>
+      <td align="right">622040</td>
+      <td>1.6 %</td>
+    </tr>
+    <tr>
+      <td>msnbot</td>
+      <td align="right">579822</td>
+      <td>1.5 %</td>
+    </tr>
+    <tr>
+      <td>googlebot-image</td>
+      <td align="right">496827</td>
+      <td>1.3 %</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td align="right">122933</td>
+      <td>0.3 %</td>
+    </tr>
+  </tbody>
+</table>
+      
+      <table border="2" id="year_2017">
+  <thead>
+    <tr>
+      <th>User agent</th>
+      <th>Abs</th>
+      <th>Rel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>*</td>
+      <td align="right">37602976</td>
+      <td>98.3 %</td>
+    </tr>
+    <tr>
+      <td>adsbot-google</td>
+      <td align="right">3077166</td>
+      <td>8 %</td>
+    </tr>
+    <tr>
+      <td>adsbot-google-mobile</td>
+      <td align="right">2186267</td>
+      <td>5.7 %</td>
+    </tr>
+    <tr>
+      <td>mj12bot</td>
+      <td align="right">2116045</td>
+      <td>5.5 %</td>
+    </tr>
+    <tr>
+      <td>googlebot</td>
+      <td align="right">1722310</td>
+      <td>4.5 %</td>
+    </tr>
+    <tr>
+      <td>ahrefsbot</td>
+      <td align="right">1684312</td>
+      <td>4.4 %</td>
+    </tr>
+    <tr>
+      <td>mediapartners-google</td>
+      <td align="right">1373088</td>
+      <td>3.6 %</td>
+    </tr>
+    <tr>
+      <td>bingbot</td>
+      <td align="right">1256736</td>
+      <td>3.3 %</td>
+    </tr>
+    <tr>
+      <td>baiduspider</td>
+      <td align="right">1160379</td>
+      <td>3 %</td>
+    </tr>
+    <tr>
+      <td>yandex</td>
+      <td align="right">967217</td>
+      <td>2.5 %</td>
+    </tr>
+    <tr>
+      <td>semrushbot</td>
+      <td align="right">962169</td>
+      <td>2.5 %</td>
+    </tr>
+    <tr>
+      <td>nutch</td>
+      <td align="right">879528</td>
+      <td>2.3 %</td>
+    </tr>
+    <tr>
+      <td>dotbot</td>
+      <td align="right">864919</td>
+      <td>2.3 %</td>
+    </tr>
+    <tr>
+      <td>ia_archiver</td>
+      <td align="right">820005</td>
+      <td>2.1 %</td>
+    </tr>
+    <tr>
+      <td>pinterest</td>
+      <td align="right">756776</td>
+      <td>2 %</td>
+    </tr>
+    <tr>
+      <td>ahrefssiteaudit</td>
+      <td align="right">701300</td>
+      <td>1.8 %</td>
+    </tr>
+    <tr>
+      <td>blexbot</td>
+      <td align="right">698805</td>
+      <td>1.8 %</td>
+    </tr>
+    <tr>
+      <td>slurp</td>
+      <td align="right">622040</td>
+      <td>1.6 %</td>
+    </tr>
+    <tr>
+      <td>msnbot</td>
+      <td align="right">579822</td>
+      <td>1.5 %</td>
+    </tr>
+    <tr>
+      <td>googlebot-image</td>
+      <td align="right">496827</td>
+      <td>1.3 %</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td align="right">122933</td>
+      <td>0.3 %</td>
+    </tr>
+  </tbody>
+</table>
+      
+      <table border="2" id="year_2018">
+  <thead>
+    <tr>
+      <th>User agent</th>
+      <th>Abs</th>
+      <th>Rel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>*</td>
+      <td align="right">37602976</td>
+      <td>98.3 %</td>
+    </tr>
+    <tr>
+      <td>adsbot-google</td>
+      <td align="right">3077166</td>
+      <td>8 %</td>
+    </tr>
+    <tr>
+      <td>adsbot-google-mobile</td>
+      <td align="right">2186267</td>
+      <td>5.7 %</td>
+    </tr>
+    <tr>
+      <td>mj12bot</td>
+      <td align="right">2116045</td>
+      <td>5.5 %</td>
+    </tr>
+    <tr>
+      <td>googlebot</td>
+      <td align="right">1722310</td>
+      <td>4.5 %</td>
+    </tr>
+    <tr>
+      <td>ahrefsbot</td>
+      <td align="right">1684312</td>
+      <td>4.4 %</td>
+    </tr>
+    <tr>
+      <td>mediapartners-google</td>
+      <td align="right">1373088</td>
+      <td>3.6 %</td>
+    </tr>
+    <tr>
+      <td>bingbot</td>
+      <td align="right">1256736</td>
+      <td>3.3 %</td>
+    </tr>
+    <tr>
+      <td>baiduspider</td>
+      <td align="right">1160379</td>
+      <td>3 %</td>
+    </tr>
+    <tr>
+      <td>yandex</td>
+      <td align="right">967217</td>
+      <td>2.5 %</td>
+    </tr>
+    <tr>
+      <td>semrushbot</td>
+      <td align="right">962169</td>
+      <td>2.5 %</td>
+    </tr>
+    <tr>
+      <td>nutch</td>
+      <td align="right">879528</td>
+      <td>2.3 %</td>
+    </tr>
+    <tr>
+      <td>dotbot</td>
+      <td align="right">864919</td>
+      <td>2.3 %</td>
+    </tr>
+    <tr>
+      <td>ia_archiver</td>
+      <td align="right">820005</td>
+      <td>2.1 %</td>
+    </tr>
+    <tr>
+      <td>pinterest</td>
+      <td align="right">756776</td>
+      <td>2 %</td>
+    </tr>
+    <tr>
+      <td>ahrefssiteaudit</td>
+      <td align="right">701300</td>
+      <td>1.8 %</td>
+    </tr>
+    <tr>
+      <td>blexbot</td>
+      <td align="right">698805</td>
+      <td>1.8 %</td>
+    </tr>
+    <tr>
+      <td>slurp</td>
+      <td align="right">622040</td>
+      <td>1.6 %</td>
+    </tr>
+    <tr>
+      <td>msnbot</td>
+      <td align="right">579822</td>
+      <td>1.5 %</td>
+    </tr>
+    <tr>
+      <td>googlebot-image</td>
+      <td align="right">496827</td>
+      <td>1.3 %</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td align="right">122933</td>
+      <td>0.3 %</td>
+    </tr>
+  </tbody>
+</table>
+      
+      <table border="2" id="year_2019">
+  <thead>
+    <tr>
+      <th>User agent</th>
+      <th>Abs</th>
+      <th>Rel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>*</td>
+      <td align="right">37602976</td>
+      <td>98.3 %</td>
+    </tr>
+    <tr>
+      <td>adsbot-google</td>
+      <td align="right">3077166</td>
+      <td>8 %</td>
+    </tr>
+    <tr>
+      <td>adsbot-google-mobile</td>
+      <td align="right">2186267</td>
+      <td>5.7 %</td>
+    </tr>
+    <tr>
+      <td>mj12bot</td>
+      <td align="right">2116045</td>
+      <td>5.5 %</td>
+    </tr>
+    <tr>
+      <td>googlebot</td>
+      <td align="right">1722310</td>
+      <td>4.5 %</td>
+    </tr>
+    <tr>
+      <td>ahrefsbot</td>
+      <td align="right">1684312</td>
+      <td>4.4 %</td>
+    </tr>
+    <tr>
+      <td>mediapartners-google</td>
+      <td align="right">1373088</td>
+      <td>3.6 %</td>
+    </tr>
+    <tr>
+      <td>bingbot</td>
+      <td align="right">1256736</td>
+      <td>3.3 %</td>
+    </tr>
+    <tr>
+      <td>baiduspider</td>
+      <td align="right">1160379</td>
+      <td>3 %</td>
+    </tr>
+    <tr>
+      <td>yandex</td>
+      <td align="right">967217</td>
+      <td>2.5 %</td>
+    </tr>
+    <tr>
+      <td>semrushbot</td>
+      <td align="right">962169</td>
+      <td>2.5 %</td>
+    </tr>
+    <tr>
+      <td>nutch</td>
+      <td align="right">879528</td>
+      <td>2.3 %</td>
+    </tr>
+    <tr>
+      <td>dotbot</td>
+      <td align="right">864919</td>
+      <td>2.3 %</td>
+    </tr>
+    <tr>
+      <td>ia_archiver</td>
+      <td align="right">820005</td>
+      <td>2.1 %</td>
+    </tr>
+    <tr>
+      <td>pinterest</td>
+      <td align="right">756776</td>
+      <td>2 %</td>
+    </tr>
+    <tr>
+      <td>ahrefssiteaudit</td>
+      <td align="right">701300</td>
+      <td>1.8 %</td>
+    </tr>
+    <tr>
+      <td>blexbot</td>
+      <td align="right">698805</td>
+      <td>1.8 %</td>
+    </tr>
+    <tr>
+      <td>slurp</td>
+      <td align="right">622040</td>
+      <td>1.6 %</td>
+    </tr>
+    <tr>
+      <td>msnbot</td>
+      <td align="right">579822</td>
+      <td>1.5 %</td>
+    </tr>
+    <tr>
+      <td>googlebot-image</td>
+      <td align="right">496827</td>
+      <td>1.3 %</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td align="right">122933</td>
+      <td>0.3 %</td>
+    </tr>
+  </tbody>
+</table>
+      
+      <table border="2" id="year_2020">
+  <thead>
+    <tr>
+      <th>User agent</th>
+      <th>Abs</th>
+      <th>Rel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>*</td>
+      <td align="right">37602976</td>
+      <td>98.3 %</td>
+    </tr>
+    <tr>
+      <td>adsbot-google</td>
+      <td align="right">3077166</td>
+      <td>8 %</td>
+    </tr>
+    <tr>
+      <td>adsbot-google-mobile</td>
+      <td align="right">2186267</td>
+      <td>5.7 %</td>
+    </tr>
+    <tr>
+      <td>mj12bot</td>
+      <td align="right">2116045</td>
+      <td>5.5 %</td>
+    </tr>
+    <tr>
+      <td>googlebot</td>
+      <td align="right">1722310</td>
+      <td>4.5 %</td>
+    </tr>
+    <tr>
+      <td>ahrefsbot</td>
+      <td align="right">1684312</td>
+      <td>4.4 %</td>
+    </tr>
+    <tr>
+      <td>mediapartners-google</td>
+      <td align="right">1373088</td>
+      <td>3.6 %</td>
+    </tr>
+    <tr>
+      <td>bingbot</td>
+      <td align="right">1256736</td>
+      <td>3.3 %</td>
+    </tr>
+    <tr>
+      <td>baiduspider</td>
+      <td align="right">1160379</td>
+      <td>3 %</td>
+    </tr>
+    <tr>
+      <td>yandex</td>
+      <td align="right">967217</td>
+      <td>2.5 %</td>
+    </tr>
+    <tr>
+      <td>semrushbot</td>
+      <td align="right">962169</td>
+      <td>2.5 %</td>
+    </tr>
+    <tr>
+      <td>nutch</td>
+      <td align="right">879528</td>
+      <td>2.3 %</td>
+    </tr>
+    <tr>
+      <td>dotbot</td>
+      <td align="right">864919</td>
+      <td>2.3 %</td>
+    </tr>
+    <tr>
+      <td>ia_archiver</td>
+      <td align="right">820005</td>
+      <td>2.1 %</td>
+    </tr>
+    <tr>
+      <td>pinterest</td>
+      <td align="right">756776</td>
+      <td>2 %</td>
+    </tr>
+    <tr>
+      <td>ahrefssiteaudit</td>
+      <td align="right">701300</td>
+      <td>1.8 %</td>
+    </tr>
+    <tr>
+      <td>blexbot</td>
+      <td align="right">698805</td>
+      <td>1.8 %</td>
+    </tr>
+    <tr>
+      <td>slurp</td>
+      <td align="right">622040</td>
+      <td>1.6 %</td>
+    </tr>
+    <tr>
+      <td>msnbot</td>
+      <td align="right">579822</td>
+      <td>1.5 %</td>
+    </tr>
+    <tr>
+      <td>googlebot-image</td>
+      <td align="right">496827</td>
+      <td>1.3 %</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td align="right">122933</td>
+      <td>0.3 %</td>
+    </tr>
+  </tbody>
+</table>
+      
+      <table border="2" id="year_2021">
+  <thead>
+    <tr>
+      <th>User agent</th>
+      <th>Abs</th>
+      <th>Rel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>*</td>
+      <td align="right">37602976</td>
+      <td>98.3 %</td>
+    </tr>
+    <tr>
+      <td>adsbot-google</td>
+      <td align="right">3077166</td>
+      <td>8 %</td>
+    </tr>
+    <tr>
+      <td>adsbot-google-mobile</td>
+      <td align="right">2186267</td>
+      <td>5.7 %</td>
+    </tr>
+    <tr>
+      <td>mj12bot</td>
+      <td align="right">2116045</td>
+      <td>5.5 %</td>
+    </tr>
+    <tr>
+      <td>googlebot</td>
+      <td align="right">1722310</td>
+      <td>4.5 %</td>
+    </tr>
+    <tr>
+      <td>ahrefsbot</td>
+      <td align="right">1684312</td>
+      <td>4.4 %</td>
+    </tr>
+    <tr>
+      <td>mediapartners-google</td>
+      <td align="right">1373088</td>
+      <td>3.6 %</td>
+    </tr>
+    <tr>
+      <td>bingbot</td>
+      <td align="right">1256736</td>
+      <td>3.3 %</td>
+    </tr>
+    <tr>
+      <td>baiduspider</td>
+      <td align="right">1160379</td>
+      <td>3 %</td>
+    </tr>
+    <tr>
+      <td>yandex</td>
+      <td align="right">967217</td>
+      <td>2.5 %</td>
+    </tr>
+    <tr>
+      <td>semrushbot</td>
+      <td align="right">962169</td>
+      <td>2.5 %</td>
+    </tr>
+    <tr>
+      <td>nutch</td>
+      <td align="right">879528</td>
+      <td>2.3 %</td>
+    </tr>
+    <tr>
+      <td>dotbot</td>
+      <td align="right">864919</td>
+      <td>2.3 %</td>
+    </tr>
+    <tr>
+      <td>ia_archiver</td>
+      <td align="right">820005</td>
+      <td>2.1 %</td>
+    </tr>
+    <tr>
+      <td>pinterest</td>
+      <td align="right">756776</td>
+      <td>2 %</td>
+    </tr>
+    <tr>
+      <td>ahrefssiteaudit</td>
+      <td align="right">701300</td>
+      <td>1.8 %</td>
+    </tr>
+    <tr>
+      <td>blexbot</td>
+      <td align="right">698805</td>
+      <td>1.8 %</td>
+    </tr>
+    <tr>
+      <td>slurp</td>
+      <td align="right">622040</td>
+      <td>1.6 %</td>
+    </tr>
+    <tr>
+      <td>msnbot</td>
+      <td align="right">579822</td>
+      <td>1.5 %</td>
+    </tr>
+    <tr>
+      <td>googlebot-image</td>
+      <td align="right">496827</td>
+      <td>1.3 %</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td align="right">122933</td>
+      <td>0.3 %</td>
+    </tr>
+  </tbody>
+</table>
+      
+      <table border="2" id="year_2022">
+  <thead>
+    <tr>
+      <th>User agent</th>
+      <th>Abs</th>
+      <th>Rel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>*</td>
+      <td align="right">36007378</td>
+      <td>96.3 %</td>
+    </tr>
+    <tr>
+      <td>adsbot-google</td>
+      <td align="right">3410658</td>
+      <td>9.1 %</td>
+    </tr>
+    <tr>
+      <td>petalbot</td>
+      <td align="right">2785729</td>
+      <td>7.5 %</td>
+    </tr>
+    <tr>
+      <td>adsbot-google-mobile</td>
+      <td align="right">2545856</td>
+      <td>6.8 %</td>
+    </tr>
+    <tr>
+      <td>googlebot</td>
+      <td align="right">2313874</td>
+      <td>6.2 %</td>
+    </tr>
+    <tr>
+      <td>mediapartners-google</td>
+      <td align="right">1913466</td>
+      <td>5.1 %</td>
+    </tr>
+    <tr>
+      <td>mj12bot</td>
+      <td align="right">1832753</td>
+      <td>4.9 %</td>
+    </tr>
+    <tr>
+      <td>bingbot</td>
+      <td align="right">1826428</td>
+      <td>4.9 %</td>
+    </tr>
+    <tr>
+      <td>baiduspider</td>
+      <td align="right">1680514</td>
+      <td>4.5 %</td>
+    </tr>
+    <tr>
+      <td>ahrefsbot</td>
+      <td align="right">1619104</td>
+      <td>4.3 %</td>
+    </tr>
+    <tr>
+      <td>ia_archiver</td>
+      <td align="right">1334193</td>
+      <td>3.6 %</td>
+    </tr>
+    <tr>
+      <td>yandex</td>
+      <td align="right">951673</td>
+      <td>2.5 %</td>
+    </tr>
+    <tr>
+      <td>yandexbot</td>
+      <td align="right">948829</td>
+      <td>2.5 %</td>
+    </tr>
+    <tr>
+      <td>semrushbot</td>
+      <td align="right">945011</td>
+      <td>2.5 %</td>
+    </tr>
+    <tr>
+      <td>sosospider</td>
+      <td align="right">934851</td>
+      <td>2.5 %</td>
+    </tr>
+    <tr>
+      <td>yahoo! slurp</td>
+      <td align="right">920784</td>
+      <td>2.5 %</td>
+    </tr>
+    <tr>
+      <td>seznambot</td>
+      <td align="right">880940</td>
+      <td>2.4 %</td>
+    </tr>
+    <tr>
+      <td>sogou spider</td>
+      <td align="right">877841</td>
+      <td>2.3 %</td>
+    </tr>
+    <tr>
+      <td>nutch</td>
+      <td align="right">845645</td>
+      <td>2.3 %</td>
+    </tr>
+    <tr>
+      <td>youdaobot</td>
+      <td align="right">826408</td>
+      <td>2.2 %</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td align="right">128561</td>
+      <td>0.3 %</td>
+    </tr>
+  </tbody>
+</table>
+      
+      <table border="2" id="year_2023">
+  <thead>
+    <tr>
+      <th>User agent</th>
+      <th>Abs</th>
+      <th>Rel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>*</td>
+      <td align="right">40106195</td>
+      <td>96.4 %</td>
+    </tr>
+    <tr>
+      <td>googlebot</td>
+      <td align="right">5345529</td>
+      <td>12.8 %</td>
+    </tr>
+    <tr>
+      <td>ahrefsbot</td>
+      <td align="right">4741262</td>
+      <td>11.4 %</td>
+    </tr>
+    <tr>
+      <td>adsbot-google</td>
+      <td align="right">3970013</td>
+      <td>9.5 %</td>
+    </tr>
+    <tr>
+      <td>petalbot</td>
+      <td align="right">3254773</td>
+      <td>7.8 %</td>
+    </tr>
+    <tr>
+      <td>adsbot-google-mobile</td>
+      <td align="right">2945316</td>
+      <td>7.1 %</td>
+    </tr>
+    <tr>
+      <td>bingbot</td>
+      <td align="right">2461822</td>
+      <td>5.9 %</td>
+    </tr>
+    <tr>
+      <td>mj12bot</td>
+      <td align="right">2001218</td>
+      <td>4.8 %</td>
+    </tr>
+    <tr>
+      <td>mediapartners-google</td>
+      <td align="right">1937100</td>
+      <td>4.7 %</td>
+    </tr>
+    <tr>
+      <td>baiduspider</td>
+      <td align="right">1669852</td>
+      <td>4 %</td>
+    </tr>
+    <tr>
+      <td>ia_archiver</td>
+      <td align="right">1464074</td>
+      <td>3.5 %</td>
+    </tr>
+    <tr>
+      <td>semrushbot</td>
+      <td align="right">1103301</td>
+      <td>2.7 %</td>
+    </tr>
+    <tr>
+      <td>yandex</td>
+      <td align="right">1086202</td>
+      <td>2.6 %</td>
+    </tr>
+    <tr>
+      <td>yahoo! slurp</td>
+      <td align="right">1054407</td>
+      <td>2.5 %</td>
+    </tr>
+    <tr>
+      <td>yandexbot</td>
+      <td align="right">1035930</td>
+      <td>2.5 %</td>
+    </tr>
+    <tr>
+      <td>dotbot</td>
+      <td align="right">1010754</td>
+      <td>2.4 %</td>
+    </tr>
+    <tr>
+      <td>nutch</td>
+      <td align="right">983574</td>
+      <td>2.4 %</td>
+    </tr>
+    <tr>
+      <td>sosospider</td>
+      <td align="right">934914</td>
+      <td>2.2 %</td>
+    </tr>
+    <tr>
+      <td>seznambot</td>
+      <td align="right">930595</td>
+      <td>2.2 %</td>
+    </tr>
+    <tr>
+      <td>sogou spider</td>
+      <td align="right">917334</td>
+      <td>2.2 %</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td align="right">158410</td>
+      <td>0.4 %</td>
+    </tr>
+  </tbody>
+</table>
+      
+      <br>
+
+      <p>The following table shows the annual top ten user agents in comparison.</p>
+      
+      
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/michaeldinzinger">michaeldinzinger</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+    <script>
+      const numberField = document.getElementById('numberField');
+      const decreaseButton = document.getElementById('decreaseButton');
+      const increaseButton = document.getElementById('increaseButton');
+
+      let currentValue = 2023;
+      numberField.value = currentValue;
+
+      decreaseButton.onclick = function() {
+          if (currentValue > 2016) {
+              currentValue--;
+              numberField.value = currentValue;
+          }
+          updateButtonState();
+      };
+
+      increaseButton.onclick = function() {
+          if (currentValue < 2023) {
+              currentValue++;
+              numberField.value = currentValue;
+          }
+          updateButtonState();
+      };
+
+      function updateButtonState() {
+          decreaseButton.disabled = currentValue <= 2016;
+          increaseButton.disabled = currentValue >= 2023;
+
+          for (let i = 2016; i <= 2023; i++) {
+            if (i != currentValue) {
+              $("#year_" + i).hide();
+            } else {
+              $("#year_" + i).show();
+            }
+          }
+      }
+
+      updateButtonState();
+    </script>
+
+  </body>
+</html>
+<!--
+ Based on:
+  https://github.com/pages-themes/minimal
+  https://github.com/orderedlist/minimal
+-->

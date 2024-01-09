@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Annual statistics of Common Crawl robots.txt archives by michaeldinzinger</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=c32b451bdf945a62e09fb31fc03d563e4bf75463">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="/assets/js/jquery-3.6.0.min.js?v=c32b451bdf945a62e09fb31fc03d563e4bf75463"></script>
+    <style>
+      table.matrix tbody tr th {
+        font-weight: bold;
+      }
+      table tbody th { font-weight: normal; }
+      table tbody td { text-align: right; }
+    </style>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Annual statistics of Common Crawl robots.txt archives</h1>
+        <p>Different annual statistics of the Common Crawl robots.txt web archives
+        </p>
+
+        
+          <nav>
+            <p>
+            
+              <a href="/">Home</a><br/>
+            
+              <a href="/overview">Overview</a><br/>
+            
+              <a href="/basic-statistics">Basic statistics</a><br/>
+            
+              <a href="/top-user-agents">Top user agents</a><br/>
+            
+              <a href="/user-agent-bias">User agent bias</a><br/>
+            
+              <a href="/resources">Resources</a><br/>
+            
+            </p>
+          </nav>
+        
+
+        
+          <p class="view"><a href="https://github.com/michaeldinzinger/michaeldinzinger.github.io">View the Project on GitHub <small></small></a></p>
+        
+
+      </header>
+      <section>
+
+      <h1 id="user-agent-bias">User agent bias</h1>
+
+<p>Previous studies on robots.txt files discuss a potential bias towards specific user agents. The hypothesis is that there exists a web-wide trend on the aversion of site owners and hence some crawlers are generally restricted to the access of smaller parts of websites than others. The analysis shows that such a bias definitely exists as the corresponding key figures vary significantly among user agents. The analysis comprises 14 product tokens (AdsBot-Google, AhrefsBot, Baiduspider, Bingbot, CCBot, ChatGPT-User, Googlebot, Google-Extended, GPTBot, ia_archiver, Mediapartners-Google, MJ12bot, PetalBot, Yandex) as well as a random reference user agent. As key figures, we have selected the average number of <code class="language-plaintext highlighter-rouge">allow</code> and <code class="language-plaintext highlighter-rouge">disallow</code> instructions per user agent. This goes along with a <a href="https://doi.org/10.1145/1367497.1367711">study</a> from 2008, which evaluates the user agent bias by counting <code class="language-plaintext highlighter-rouge">disallow</code> instructions. Note that this is a rather course heuristic as it remains unclear how big is the part of the website, which is covered by the URL path in the <code class="language-plaintext highlighter-rouge">disallow</code> statement. Due to its ambiguity, we have thought about another key figure in order to analyze the popularity or antipathy among user agents, namely the total number of the <em>disallow all</em> instructions per user agent. This number is additionally set in relation to the total number of appearences of the respective user agent in robots.txt files.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Example:
+User-agent: GPTBot
+Disallow: /
+</code></pre></div></div>
+<p>We assume a <em>disallow all</em> statement in case the robots.txt instructions prohibit the access of a URL pointing to a random address in the root directory of the website with only one <code class="language-plaintext highlighter-rouge">disallow</code> instruction stated in the robots.txt file.</p>
+
+
+      <div style="display: flex; justify-content: center;">
+        <button id="decreaseButton" class="button">&#8592;</button>
+        <input type="text" id="numberField" class="text-field" style="width: 60px; padding: 2px; text-align: center;" readonly>
+        <button id="increaseButton" class="button">&#8594;</button>
+      </div>
+      
+      <!-- <br>
+      
+      <br> -->
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/michaeldinzinger">michaeldinzinger</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+    <script>
+      const numberField = document.getElementById('numberField');
+      const decreaseButton = document.getElementById('decreaseButton');
+      const increaseButton = document.getElementById('increaseButton');
+
+      let currentValue = 2023;
+      numberField.value = currentValue;
+
+      decreaseButton.onclick = function() {
+          if (currentValue > 2016) {
+              currentValue--;
+              numberField.value = currentValue;
+          }
+          updateButtonState();
+      };
+
+      increaseButton.onclick = function() {
+          if (currentValue < 2023) {
+              currentValue++;
+              numberField.value = currentValue;
+          }
+          updateButtonState();
+      };
+
+      function updateButtonState() {
+          decreaseButton.disabled = currentValue <= 2016;
+          increaseButton.disabled = currentValue >= 2023;
+
+          for (let i = 2016; i <= 2023; i++) {
+            if (i != currentValue) {
+              $("#year_" + i).hide();
+            } else {
+              $("#year_" + i).show();
+            }
+          }
+      }
+
+      updateButtonState();
+    </script>
+
+  </body>
+</html>
+<!--
+ Based on:
+  https://github.com/pages-themes/minimal
+  https://github.com/orderedlist/minimal
+-->
