@@ -11,42 +11,9 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script src="{{ '/assets/js/jquery-3.6.0.min.js?v=' | append: site.github.build_revision | relative_url }}"></script>
-    <script src="{{ '/assets/js/jquery.tablesorter.min.js?v=' | append: site.github.build_revision | relative_url }}"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $(".tablesorter").tablesorter({{ page.table_sortlist }});
-        $("#search").on("keyup", function() {
-          var value = $(this).val().toLowerCase();
-          $(".tablesearcher tbody tr").filter(function() {
-            $(this).toggle($(this).children('th').text().indexOf(value) > -1);
-          });
-        });
-      });
-    </script>
     <style>
-      table.tablepercentage { table-layout: auto; }
-      table.tablepercentage thead tr:first-child th {
-          hyphens: auto; font-size: small;
-      }
-      table.tablepercentage td { min-width: 60px; }
-      table.tablepercentage tbody th { max-width: 200px; hyphens: auto; }
-      table.tablepercentage thead tr:last-child .header:not(:first-child):before {
-        content: "%";
-      }
       table.matrix tbody tr th {
         font-weight: bold;
-      }
-      table.tablesorter thead tr:last-child .header {
-        background-image: url({{ '/assets/img/bg.gif?v=' | append: site.github.build_revision | relative_url }});
-        background-repeat: no-repeat;
-        background-position: center right;
-        cursor: pointer;
-      }
-      table.tablesorter thead tr:last-child .headerSortUp {
-        background-image: url({{ '/assets/img/asc.gif?v=' | append: site.github.build_revision | relative_url }});
-      }
-      table.tablesorter thead tr:last-child .headerSortDown {
-        background-image: url({{ '/assets/img/desc.gif?v=' | append: site.github.build_revision | relative_url }});
       }
       table tbody th { font-weight: normal; }
       table tbody td { text-align: right; }
@@ -78,10 +45,6 @@
       <section>
 
       {{ content }}
-
-      {% if page.table_searcher %}
-      <p><input type="text" id="search" placeholder="{{ page.table_searcher }}"></p>
-      {% endif %}
 
       {% for table in page.table_include %}
       {% include_relative {{ table }} %}

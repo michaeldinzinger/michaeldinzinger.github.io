@@ -1,9 +1,12 @@
 ---
 layout: basic
-table_content_length: tables/basic-content-length.html
+table_content_length_all: tables/basic-content-length-all.html
+table_content_length_curlie: tables/basic-content-length-curlie.html
+table_num_lines_all: tables/basic-num-lines-all.html
+table_num_lines_curlie: tables/basic-num-lines-curlie.html
+table_num_user_agents_all: tables/basic-num-user-agents-all.html
+table_num_user_agents_curlie: tables/basic-num-user-agents-curlie.html
 table_crawldelay: tables/basic-crawldelay.html
-table_num_lines: tables/basic-num-lines.html
-table_num_user_agents: tables/basic-num-user-agents.html
 table_num_sitemaps: tables/basic-num-sitemaps.html
 ---
 

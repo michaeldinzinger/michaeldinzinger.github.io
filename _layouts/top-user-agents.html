@@ -11,12 +11,23 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script src="{{ '/assets/js/jquery-3.6.0.min.js?v=' | append: site.github.build_revision | relative_url }}"></script>
-    <style>
+    <style type="text/css">
       table.matrix tbody tr th {
         font-weight: bold;
       }
       table tbody th { font-weight: normal; }
       table tbody td { text-align: right; }
+      /* .tg  {border-collapse:collapse;border-spacing:0;}
+      .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+        overflow:hidden;padding:10px 10px;word-break:normal;}
+      .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+        font-weight:normal;overflow:hidden;padding:10px 10px;word-break:normal;} */
+      /* .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle;width:55%;}
+      .tg .tg-baqh{text-align:center;vertical-align:top;width:10%;}
+      .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top;width:55%;font-weight:bold;} */
+      .tg .tg-lboi{ text-align: left; width: 55%; padding-left: 15px; }
+      .tg .tg-baqh{ text-align:center; width: 10%; }
+      .tg .tg-0pky{ width: 55%; font-weight: bold; }
     </style>
 
   </head>
@@ -58,12 +69,12 @@
       {% endfor %}
       <br>
 
-      <p>The following table shows the annual top ten user agents in comparison.</p>
+      <!-- <p>The following table shows the annual top ten user agents in comparison.</p>
       
       {% for table in page.table_comparsion %}
       {% include_relative {{ table }} %}
       <br>
-      {% endfor %}
+      {% endfor %} -->
 
       </section>
       <footer>
