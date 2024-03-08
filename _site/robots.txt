@@ -1,9 +1,0 @@
-user-agent: *
-disallow: /a
-allow: /a/b
-disallow: /a/b/c
-sitemap: /idonthaveasitemap.xml
-
-user-agent: test
-disallow: /
-allow: /test
