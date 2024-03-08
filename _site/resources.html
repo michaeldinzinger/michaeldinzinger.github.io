@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Annual statistics of Common Crawl robots.txt archives by michaeldinzinger</title>
+    <title>Robots.txt study</title>
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=9471d06538a6de8364b95c0504587f70e9841003">
+    <link rel="stylesheet" href="/assets/css/style.css?v=cad3eca05cd4fb04f6fcabb8a3c8ad91788f64df">
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script src="/assets/js/jquery-3.6.0.min.js?v=9471d06538a6de8364b95c0504587f70e9841003"></script>
+    <script src="/assets/js/jquery-3.6.0.min.js?v=cad3eca05cd4fb04f6fcabb8a3c8ad91788f64df"></script>
     <style>
       table.matrix tbody tr th {
         font-weight: bold;
@@ -23,7 +23,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Annual statistics of Common Crawl robots.txt archives</h1>
+        <h1>Longitudinal study of robots.txt files</h1>
         <p>Different annual statistics of the Common Crawl robots.txt web archives
         </p>
 
@@ -31,11 +31,9 @@
           <nav>
             <p>
             
-              <a href="/">Home</a><br/>
+              <a href="/">Overview</a><br/>
             
-              <a href="/overview">Overview</a><br/>
-            
-              <a href="/basic-statistics">Basic statistics</a><br/>
+              <a href="/file-statistics">File statistics</a><br/>
             
               <a href="/top-user-agents">Top user agents</a><br/>
             
@@ -48,7 +46,7 @@
         
 
         
-          <p class="view"><a href="https://github.com/michaeldinzinger/michaeldinzinger.github.io">View the Project on GitHub <small></small></a></p>
+          <p class="view"><a href="https://opencode.it4i.eu/openwebsearcheu-public/commoncrawl-parser">View the Software Project on GitLab</a></p>
         
 
       </header>
@@ -56,19 +54,46 @@
 
       <h1 id="resources">Resources</h1>
 
-<h2 id="sitemaps">Sitemaps</h2>
-<p><a href="resources/all-sitemaps.zip">List of all sitemaps</a></p>
-
-<p><a href="resources/curlie-sitemaps.zip">Curlie-curated list of sitemaps</a></p>
-
-<h2 id="robotstxt-urls">Robots.txt URLs</h2>
-<p><a href="resources/all-sitemaps.zip">List of all URLs of robots.txt files</a></p>
-
-<p><a href="resources/curlie-sitemaps.zip">Curlie-curated list of URLs of robots.txt files</a></p>
+<p>In the course of the study, we have extracted the URLs of the valid robots.txt files from the crawl dump in December 2023, as well as the Sitemap links from the robots.txt files. Moreover, the links are aggregated by website category using the Curlie top level labels. Both datasets are available for download on this <a href="https://zenodo.org/records/10511292">Zenodo Repository</a>.</p>
 
 
       
-      
+      <table border="2">
+    <thead>
+      <tr>
+        <th colspan="3">Robots.txt URLs</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>List of all valid robots.txt URLs</td>
+        <td>41,611,704</td>
+        <td><a href="https://zenodo.org/api/records/10511292/draft/files/all-robotstxt.zip/content" download>Download</a></td>
+      </tr>
+      <tr>
+        <td>Curlie-curated list of valid robots.txt URLs</td>
+        <td>314,228</td>
+        <td><a href="https://zenodo.org/api/records/10511292/draft/files/robotstxt-curlie.zip/content" download>Download</a></td>
+      </tr>
+    </tbody>
+    <thead>
+      <tr>
+        <th colspan="3">Sitemap links</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>List of all sitemap links</td>
+        <td>32,252,027</td>
+        <td><a href="https://zenodo.org/api/records/10511292/draft/files/all-sitemaps.zip/content" download>Download</a></td>
+      </tr>
+      <tr>
+        <td>Curlie-curated list of sitemap links</td>
+        <td>254,298</td>
+        <td><a href="https://zenodo.org/api/records/10511292/draft/files/sitemaps-curlie.zip/content" download>Download</a></td>
+      </tr>
+    </tbody>
+</table>
       <br>
       
 

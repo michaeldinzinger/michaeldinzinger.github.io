@@ -1,10 +1,16 @@
-Annual statistics of Common Crawl robots.txt archives
-=====================================================
+---
+layout: table
+table_include: tables/overview.html
+---
 
-Statistics of [Common Crawl](https://commoncrawl.org/)'s [web archives](https://commoncrawl.org/the-data/get-started/) on robots.txt files:
+Overview
+====
 
-* [Overview](overview) - Number of parsed documents, Capture times, Distribution of HTTP status codes
-* [Basic statistics](basic-statistics) - Average content length (file size), Average crawl delay, Average number of lines, user agents and sitemaps
-* [Top user agents](top-user-agents) - most frequently used product tokens over the years
-* [User agent bias](user-agent-bias) - Number of *disallow all* instructions per user agent over the years, Average number of `allow` and `disallow` instructions per user agent over the years; overall and per website category
-* [Resources](resources) - Dataset of extracted sitemap links; overall and per website category
+Since 2016, [Common Crawl](https://commoncrawl.org/) regularly publishes the [robots.txt files](https://commoncrawl.org/blog/robotstxt-and-404-redirect-data-sets) that have been fetched during the CCBot's web crawl. The [robots.txt dumps](https://commoncrawl.org/the-data/get-started/) are published along with the regular WARC, WAT and WET files in intervals of approximately two to three months. We have parsed the last robots.txt dumps of each year since 2016, resulting in eight years of collected statistics.
+
+* [File statistics](file-statistics) - Average content length (file size), Average number of lines and user agents
+* [Top user agents](top-user-agents) - Most frequently mentioned agent names
+* [User agent bias](user-agent-bias) - Number of *disallow all* instructions per user agent
+* [Resources](resources) - Dataset of extracted links to valid robots.txt files and sitemaps
+
+The following table outlines each year together with the period, in which the robots.txt were fetched (capture time). As the dumps also contain unsuccessful fetches (e.g. HTTP status code 404) and unparsable files, the table also yields the total number of successfully parsed robots.txt files and gives an estimation of the adoption rate of robots.txt among websites (to be more precise, hosts).

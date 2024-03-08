@@ -15,4 +15,4 @@ tables_years:
 Top user agents
 ===============
 
-Crawlers set their own name, which is called a product token, to find relevant groups of `allow` and `disallow` instructions. The product token (ExampleBot) is a substring of the User-Agent HTTP header. The following table shows the most frequently used product tokens in robots.txt files over the years. Note that for all further analysis of user agents we employ a case-insensitive comparison (`Bingbot` and `bingbot` are identical). The last column shows the percentage of robots.txt files, which contain the respective product token.
+Crawlers set their own name, also called product token, to find relevant groups of `allow` and `disallow` instructions. The product token (e.g. ExampleBot) is a substring of the User-Agent HTTP header. The following table lists the most frequently used product tokens in robots.txt files over the years. Note that for all further analysis of user agents we employ a case-insensitive comparison (`Bingbot` and `bingbot` are identical). The last column denotes the percentage of robots.txt files, which contain the respective product token.

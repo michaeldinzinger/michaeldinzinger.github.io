@@ -1,14 +1,12 @@
-title: Annual statistics of Common Crawl robots.txt archives
+title: Longitudinal study of robots.txt files
 description: Different annual statistics of the Common Crawl robots.txt web archives
 
 show_navigation: True
 navlist:
-  - title: Home
-    url: /
   - title: Overview
-    url: /overview
-  - title: Basic statistics
-    url: /basic-statistics
+    url: /
+  - title: File statistics
+    url: /file-statistics
   - title: Top user agents
     url: /top-user-agents
   - title: User agent bias

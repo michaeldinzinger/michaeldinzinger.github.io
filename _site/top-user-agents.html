@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Annual statistics of Common Crawl robots.txt archives by michaeldinzinger</title>
+    <title>Robots.txt study</title>
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=9471d06538a6de8364b95c0504587f70e9841003">
+    <link rel="stylesheet" href="/assets/css/style.css?v=cad3eca05cd4fb04f6fcabb8a3c8ad91788f64df">
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script src="/assets/js/jquery-3.6.0.min.js?v=9471d06538a6de8364b95c0504587f70e9841003"></script>
+    <script src="/assets/js/jquery-3.6.0.min.js?v=cad3eca05cd4fb04f6fcabb8a3c8ad91788f64df"></script>
     <style type="text/css">
       table.matrix tbody tr th {
         font-weight: bold;
@@ -34,7 +34,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Annual statistics of Common Crawl robots.txt archives</h1>
+        <h1>Longitudinal study of robots.txt files</h1>
         <p>Different annual statistics of the Common Crawl robots.txt web archives
         </p>
 
@@ -42,11 +42,9 @@
           <nav>
             <p>
             
-              <a href="/">Home</a><br/>
+              <a href="/">Overview</a><br/>
             
-              <a href="/overview">Overview</a><br/>
-            
-              <a href="/basic-statistics">Basic statistics</a><br/>
+              <a href="/file-statistics">File statistics</a><br/>
             
               <a href="/top-user-agents">Top user agents</a><br/>
             
@@ -59,7 +57,7 @@
         
 
         
-          <p class="view"><a href="https://github.com/michaeldinzinger/michaeldinzinger.github.io">View the Project on GitHub <small></small></a></p>
+          <p class="view"><a href="https://opencode.it4i.eu/openwebsearcheu-public/commoncrawl-parser">View the Software Project on GitLab</a></p>
         
 
       </header>
@@ -67,7 +65,7 @@
 
       <h1 id="top-user-agents">Top user agents</h1>
 
-<p>Crawlers set their own name, which is called a product token, to find relevant groups of <code class="language-plaintext highlighter-rouge">allow</code> and <code class="language-plaintext highlighter-rouge">disallow</code> instructions. The product token (ExampleBot) is a substring of the User-Agent HTTP header. The following table shows the most frequently used product tokens in robots.txt files over the years. Note that for all further analysis of user agents we employ a case-insensitive comparison (<code class="language-plaintext highlighter-rouge">Bingbot</code> and <code class="language-plaintext highlighter-rouge">bingbot</code> are identical). The last column shows the percentage of robots.txt files, which contain the respective product token.</p>
+<p>Crawlers set their own name, also called product token, to find relevant groups of <code class="language-plaintext highlighter-rouge">allow</code> and <code class="language-plaintext highlighter-rouge">disallow</code> instructions. The product token (e.g. ExampleBot) is a substring of the User-Agent HTTP header. The following table lists the most frequently used product tokens in robots.txt files over the years. Note that for all further analysis of user agents we employ a case-insensitive comparison (<code class="language-plaintext highlighter-rouge">Bingbot</code> and <code class="language-plaintext highlighter-rouge">bingbot</code> are identical). The last column denotes the percentage of robots.txt files, which contain the respective product token.</p>
 
 
       <div style="display: flex; justify-content: center;">
